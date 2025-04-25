@@ -1,5 +1,5 @@
 # 1. Install required packages
-# !pip install pymupdf pandas
+!pip install pymupdf pandas
 
 # 2. Import necessary libraries
 import fitz  # PyMuPDF
@@ -11,7 +11,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 
 # 4. Load PDF
-pdf_path = '/content/drive/My Drive/ebs/april_banjar.pdf'
+pdf_path = '/content/drive/My Drive/ebs/maret_cikole.pdf'
 doc = fitz.open(pdf_path)
 text = ""
 for page in doc:
@@ -68,7 +68,7 @@ df = pd.DataFrame(records)
 df = df[['ref_no', 'trn_date', 'eff_date', 'amount', 'balance', 'type', 'description']]
 
 # 10. Save to CSV
-output_path = '/content/drive/My Drive/ebs/april_banjar_output_balanced.csv'
+output_path = '/content/drive/My Drive/ebs/maret_cikole_balanced.csv'
 df.to_csv(output_path, index=False)
 
 # 11. Show preview
